@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  demo1:
+    image: h2s/hello-demo:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    networks:
+      - demo-network
+  demo2:
+    image: h2s/hello-demo2:0.0.1-SNAPSHOT
+    ports:
+      - "8100:8100"
+    networks:
+      - demo-network
+networks:
+  demo-network:
